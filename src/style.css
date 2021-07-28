@@ -1,0 +1,79 @@
+h1,
+h2 {
+  font-size: 24px;
+  padding-left: 35px;
+}
+
+.container {
+  width: 50%;
+  background-color: #3f3f3f;
+  margin-top: 40px;
+  color: #939aa9;
+  display: block;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .submit {
+  display: inline;
+} */
+
+.all-info {
+  margin-top: 20px;
+  padding-top: 17px;
+}
+
+.temperature {
+  text-align: center;
+  vertical-align: top;
+  padding-left: 50px;
+}
+
+.details {
+  font-size: 12px;
+  padding-left: 75px;
+}
+
+.current {
+  font-size: 72px;
+  padding-top: 17px;
+  padding-left: 40px;
+}
+
+.next-days {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  font-size: 14px;
+}
+
+.first {
+  padding-left: 50px;
+}
+
+.last {
+  padding-right: 70px;
+}
+
+.fa-sun {
+  font-size: 24px;
+}
+
+#search-bar {
+  margin-left: 75px;
+  padding-top: 40px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.number {
+  font-size: 64px;
+  vertical-align: top;
+}
+
+.both-metrics {
+  font-size: 14px;
+  vertical-align: top;
+  padding-top: 17px;
+  padding-bottom: 70px;
+}
