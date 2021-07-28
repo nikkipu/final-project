@@ -77,3 +77,9 @@ h2 {
   padding-top: 17px;
   padding-bottom: 70px;
 }
+
+.footer {
+    font-size: 10px;
+    padding-left: 360px;
+    font-family: Arial, Helvetica, sans-serif;
+}
