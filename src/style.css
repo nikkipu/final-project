@@ -1,7 +1,7 @@
 h1,
 h2 {
   font-size: 24px;
-  padding-left: 35px;
+  padding-left: 65px;
 }
 
 .container {
@@ -19,10 +19,6 @@ h2 {
   text-align: left;
 }
 
-/* .submit {
-  display: inline;
-} */
-
 .all-info {
   margin-top: 20px;
   padding-top: 17px;
@@ -31,12 +27,12 @@ h2 {
 .temperature {
   text-align: center;
   vertical-align: top;
-  padding-left: 50px;
+  padding-left: 110px;
 }
 
 .details {
   font-size: 12px;
-  padding-left: 75px;
+  padding-left: 100px;
   position: relative;
   top: 20px;
 }
@@ -44,7 +40,7 @@ h2 {
 .current {
   font-size: 72px;
   padding-top: 17px;
-  padding-left: 40px;
+  padding-left: 50px;
 }
 
 .next-days {
@@ -66,10 +62,10 @@ h2 {
   font-size: 24px;
 }
 
-#search-bar {
+.search-bar {
   margin-left: 75px;
   padding-top: 40px;
-  padding-right: 30px;
+  padding-right: 50px;
   text-align: right;
 }
 
