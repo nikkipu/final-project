@@ -15,85 +15,87 @@
 
 <body>
     <div class="container">
-        <form class="search-bar" id="search-bar">
-            <input type="search" placeholder="City" autofocus="on" autocomplete="on" id="type-city" />
-            <input type="submit" value="Search" id="search-city" />
-            <input type="submit" value="Current Location" id="current-location" />
-        </form>
-        <br />
-        <h1 id="city">
-            New York City
-        </h1>
-        <h2 id="date-time">
-            Tuesday | 9:45 AM
-        </h2>
-        <div class="row all-info">
-            <div class="col-4 temperature">
-                <span class="number">
-                    77°
-                </span>
-                <span class="both-metrics">
-                    <span class="celsius">
-                        <a href="#">C</a>
+        <div class="weather-app-wrapper">
+            <form class="search-bar" id="search-bar">
+                <input type="search" placeholder="City" autofocus="on" autocomplete="on" id="type-city" />
+                <input type="submit" value="Search" id="search-city" />
+                <input type="submit" value="Current Location" id="current-location" />
+            </form>
+            <br />
+            <h1 id="city">
+                New York City
+            </h1>
+            <h2 id="date-time">
+                Tuesday | 9:45 AM
+            </h2>
+            <div class="row all-info">
+                <div class="col-4 temperature">
+                    <span class="number">
+                        77°
                     </span>
-                    |
-                    <span class="farenheit">
-                        <a href="#">F</a>
+                    <span class="both-metrics">
+                        <span class="celsius">
+                            <a href="#">C</a>
+                        </span>
+                        |
+                        <span class="farenheit">
+                            <a href="#">F</a>
+                        </span>
                     </span>
-                </span>
+                </div>
+                <div class="col-4 details">
+                    Precipitation: 100%
+                    <br />
+                    Wind: 3mph
+                </div>
+                <div class="col-4">
+                    <i class="fas fa-cloud-showers-heavy current"></i>
+                </div>
             </div>
-            <div class="col-4 details">
-                Precipitation: 100%
-                <br />
-                Wind: 3mph
-            </div>
-            <div class="col-4">
-                <i class="fas fa-cloud-showers-heavy current"></i>
+            <div class="row next-days">
+                <div class="col-3 first">
+                    <i class="fas fa-sun"> </i>
+                    <br />
+                    Wednesday
+                    <br />
+                    60°
+                </div>
+
+                <div class="col-2">
+                    <i class="fas fa-sun"> </i>
+                    <br />
+                    Thursday
+                    <br />
+                    60°
+                </div>
+
+                <div class="col-2">
+                    <i class="fas fa-sun"> </i>
+                    <br />
+                    Friday
+                    <br />
+                    60°
+                </div>
+
+                <div class="col-2">
+                    <i class="fas fa-sun"> </i>
+                    <br />
+                    Saturday
+                    <br />
+                    60°
+                </div>
+
+                <div class="col-3 last">
+                    <i class="fas fa-sun"> </i>
+                    <br />
+                    Sunday
+                    <br />
+                    60°
+                </div>
             </div>
         </div>
-        <div class="row next-days">
-            <div class="col-3 first">
-                <i class="fas fa-sun"> </i>
-                <br />
-                Wednesday
-                <br />
-                60°
-            </div>
-
-            <div class="col-2">
-                <i class="fas fa-sun"> </i>
-                <br />
-                Thursday
-                <br />
-                60°
-            </div>
-
-            <div class="col-2">
-                <i class="fas fa-sun"> </i>
-                <br />
-                Friday
-                <br />
-                60°
-            </div>
-
-            <div class="col-2">
-                <i class="fas fa-sun"> </i>
-                <br />
-                Saturday
-                <br />
-                60°
-            </div>
-
-            <div class="col-3 last">
-                <i class="fas fa-sun"> </i>
-                <br />
-                Sunday
-                <br />
-                60°
-            </div>
-        </div>
+        <span class="footer"><a href="https://github.com/nikkipu/final-project" target="_blank">Open source code</a> by Nikki Puyat</span>
     </div>
-    <span class="footer"><a href="https://github.com/nikkipu/final-project" target="_blank">Open source code</a> by Nikki Puyat</span>
 
     <script src="src/app.js"></script>
 </body>

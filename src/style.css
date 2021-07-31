@@ -5,13 +5,18 @@ h2 {
 }
 
 .container {
-  width: 50%;
-  background-color: #3f3f3f;
-  margin-top: 40px;
-  color: #939aa9;
+  width: 800px;
   display: block;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.weather-app-wrapper {
+  background-color: #3f3f3f;
+  color: #939aa9;
+  margin-top: 40px;
+  border-radius: 12px;
+  text-align: left;
 }
 
 /* .submit {
@@ -32,6 +37,8 @@ h2 {
 .details {
   font-size: 12px;
   padding-left: 75px;
+  position: relative;
+  top: 20px;
 }
 
 .current {
@@ -74,12 +81,12 @@ h2 {
 .both-metrics {
   font-size: 14px;
   vertical-align: top;
-  padding-top: 17px;
-  padding-bottom: 70px;
+  position: relative;
+  top: 20px;
 }
 
 .footer {
     font-size: 10px;
-    padding-left: 360px;
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
 }
