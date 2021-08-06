@@ -5,7 +5,7 @@ h2 {
 }
 
 .container {
-  width: 800px;
+  max-width: 800px;
   display: block;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
@@ -28,6 +28,11 @@ h2 {
   text-align: center;
   vertical-align: top;
   padding-left: 110px;
+}
+
+.number {
+  font-size: 64px;
+  vertical-align: top;
 }
 
 .details {
@@ -67,11 +72,6 @@ h2 {
   padding-top: 40px;
   padding-right: 50px;
   text-align: right;
-}
-
-.number {
-  font-size: 64px;
-  vertical-align: top;
 }
 
 .both-metrics {

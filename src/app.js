@@ -1,31 +1,43 @@
 console.log("hi");
-const axios = require("axios");
 
-console.log("hi");
+function getTempAgain (response) {
+  let h1Again = document.querySelector("#city");
+  let currentTempAgain = document.querySelector(".number");
 
-function updateCity(event) {
-  event.preventDefault();
-
-  let typeCity = document.querySelector("#type-city");
-  let h1 = document.querySelector("#city");
-
-  h1.innerHTML = `${typeCity.value}`;
-
-  let apiKey = "0e058f62fe2dafe733ff53545a2cf37c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${typeCity.value}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(getTemp);
+  h1Again.innerHTML = response.data.name;
+  currentTempAgain.innerHTML = Math.round(response.data.main.temp);
 }
 
-function getTemp(response) {
-  let currentCityTemp = Math.round(response.data.main.temp);
+let apiKey = '0e058f62fe2dafe733ff53545a2cf37c';
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
 
-  let currentTemperature = document.querySelector(".number");
-  currentTemperature.innerHTML = `${currentCityTemp}°`;
-}
+console.log(apiUrl.data);
 
-let searchCity = document.querySelector("#search-bar");
-searchCity.addEventListener("submit", updateCity);
+axios.get(apiUrl).then(getTempAgain);
+
+// function updateCity(event) {
+//   event.preventDefault();
+
+//   let typeCity = document.querySelector("#type-city");
+//   let h1 = document.querySelector("#city");
+
+//   h1.innerHTML = `${typeCity.value}`;
+
+//   let apiKey = "0e058f62fe2dafe733ff53545a2cf37c";
+//   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${typeCity.value}&appid=${apiKey}&units=metric`;
+
+//   axios.get(apiUrl).then(getTemp);
+// }
+
+// function getTemp(response) {
+//   let currentCityTemp = Math.round(response.data.main.temp);
+
+//   let currentTemperature = document.querySelector(".number");
+//   currentTemperature.innerHTML = `${currentCityTemp}°`;
+// }
+
+// let searchCity = document.querySelector("#search-bar");
+// searchCity.addEventListener("submit", updateCity);
 
 // let currentLocation = document.querySelector("#current-location");
 // currentLocation.addEventListener("submit", updateCurrentLocationTemp);
