@@ -1,17 +1,20 @@
-console.log("hi");
-
 function getTempAgain (response) {
-  let h1Again = document.querySelector("#city");
-  let currentTempAgain = document.querySelector(".number");
+  console.log(response.data);
+  let h1Element = document.querySelector("#city");
+  let currentTempElement = document.querySelector(".number");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
 
-  h1Again.innerHTML = response.data.name;
-  currentTempAgain.innerHTML = Math.round(response.data.main.temp);
+  h1Element.innerHTML = response.data.name;
+  currentTempElement.innerHTML = Math.round(response.data.main.temp);
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 let apiKey = '0e058f62fe2dafe733ff53545a2cf37c';
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
-
-console.log(apiUrl.data);
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(getTempAgain);
 
