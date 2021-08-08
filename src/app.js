@@ -1,22 +1,45 @@
-function getTempAgain (response) {
+function formatDate (timestamp) {
+  let date = new Date(timestamp);
+  let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+  let day = days[date.getDay()];
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+
+  return `${day} | ${hour}:${minute}`;
+}
+
+function getTemperature (response) {
   console.log(response.data);
   let h1Element = document.querySelector("#city");
   let currentTempElement = document.querySelector(".number");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let timeElement = document.querySelector('#date-time');
 
   h1Element.innerHTML = response.data.name;
   currentTempElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  timeElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let apiKey = '0e058f62fe2dafe733ff53545a2cf37c';
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
 
-axios.get(apiUrl).then(getTempAgain);
+axios.get(apiUrl).then(getTemperature);
 
 // function updateCity(event) {
 //   event.preventDefault();

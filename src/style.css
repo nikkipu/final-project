@@ -24,7 +24,6 @@ h2 {
   font-size: 20px;
   list-style-type: none;
   line-height: 30px;
-  text-transform: capitalize;
 }
 
 .all-info {
@@ -102,4 +101,8 @@ h2 {
 
 #city {
   font-size: 30px;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
 }
