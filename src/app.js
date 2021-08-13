@@ -19,8 +19,7 @@ function formatDate (timestamp) {
   return `${day} | ${hour}:${minute}`;
 }
 
-function getTemperature (response) {
-  console.log(response.data);
+function getInfo (response) {
   let h1Element = document.querySelector("#city");
   let currentTempElement = document.querySelector(".number");
   let descriptionElement = document.querySelector("#description");
@@ -38,11 +37,20 @@ function getTemperature (response) {
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-let apiKey = '0e058f62fe2dafe733ff53545a2cf37c';
-let city = "New York";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+function search(city) {
+  let apiKey = '0e058f62fe2dafe733ff53545a2cf37c';
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(getInfo);
+}
 
-axios.get(apiUrl).then(getTemperature);
+function handleSubmit (event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#type-city");
+  search(searchInput.value);
+}
+
+let form = document.querySelector("#search-bar");
+form.addEventListener("submit", handleSubmit);
 
 // function updateCity(event) {
 //   event.preventDefault();
@@ -88,25 +96,25 @@ axios.get(apiUrl).then(getTemperature);
 
 // navigator.geolocation.getCurrentPosition(here);
 
-let now = new Date();
+// let now = new Date();
 
-let current = document.querySelector("#date-time");
+// let current = document.querySelector("#date-time");
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let currentDay = days[now.getDay()];
+// let days = [
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday"
+// ];
+// let currentDay = days[now.getDay()];
 
-let currentHour = now.getHours();
-let currentMinutes = now.getMinutes();
+// let currentHour = now.getHours();
+// let currentMinutes = now.getMinutes();
 
-current.innerHTML = `${currentDay} | ${currentHour}:${currentMinutes}`;
+// current.innerHTML = `${currentDay} | ${currentHour}:${currentMinutes}`;
 
 // function changeTemp(event) {
 //   event.preventDefault();
