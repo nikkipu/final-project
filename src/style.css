@@ -93,6 +93,16 @@ h2 {
   top: 20px;
 }
 
+.both-metrics .active {
+  color: #939aa9;
+  cursor: default;
+  text-decoration: none;
+}
+
+.both-metrics .active:hover {
+  text-decoration: none;
+}
+
 .footer {
     font-size: 10px;
     text-align: left;
